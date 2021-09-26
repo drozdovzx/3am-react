@@ -125,6 +125,7 @@ html{
   cursor: pointer;
   border: none;
   background: transparent;
+  text-transform: uppercase;
 }
 .nav-link:after{
   content: "";
