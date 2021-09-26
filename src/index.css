@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+button{
+  background-color: transparent;
+  border: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,18 +29,18 @@ code {
 html{
   scroll-snap-type: y proximity;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 .col-chng{
   fill: black !important;
 }
-#topBtn {
+.topBtn {
   width: 50px;
   height: 50px;
   border-radius: 50px;
   position: fixed;
   top: 0;
   right: 15px;
-  z-index: 10000;
   font-size: 18px;
   border: none;
   outline: none;
@@ -43,9 +48,13 @@ html{
   color: white;
   cursor: pointer;
   transition-duration: .5s;
+  z-index: 0;
+}
+.topBtn img {
+  transform: scale(0.8);
 }
 
-#topBtn:hover {
+.topBtn:hover {
   background-color: #555;
 }
 
@@ -114,6 +123,8 @@ html{
   margin: 0 20px;
   position: relative;
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 .nav-link:after{
   content: "";
@@ -167,6 +178,7 @@ html{
 .lang-change:hover .lang-change-window{
   transform: translateY(80px);
   transition: .2s;
+  z-index: 1000;
 }
 .lang-change:not(:hover) .lang-change-window{
   transform: translateY(-115px);
@@ -184,7 +196,7 @@ html{
   margin: auto auto;
   display: flex;
   flex-direction: row;
-  z-index: 1000;
+  z-index: 1001;
   background: white;
 }
 .svg-lang {

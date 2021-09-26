@@ -5,29 +5,29 @@ import Eng from "../images/eng.svg";
 import Rus from "../images/rus.svg";
 import Est from "../images/est.svg";
 
+import ToTopBtn from "../Components/ToTopBtn"
+import Item from "../Components/MenuItem";
+
 const Header = () => {
     return (
+
         <section id="myHeader" className="header" >
             <div id="white-back"/>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a className="logo" id="logo">
+            <button className="logo" id="logo">
                 <img className="logo-img" alt="Logo" src={Logo}/>
-            </a>
+            </button>
             <div className="menu-btn" id="menu-btn">
                 <img alt="Strips" src={Strips} className="menu-btn-img"/>
             </div>
-            <nav className="nav" id="nav-main">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link" id="nav-1">About</a>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link" id="nav-2">Cookies</a>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link" id="nav-3">Two ways</a>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link" id="nav-4">Team</a>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link" id="nav-5">Order</a>
-            </nav>
+
+            <Item items={[
+                'About',
+                'Cookies',
+                'Two ways',
+                'Team',
+                'Order'
+            ]}/>
+
             <div id="langChange" className="lang-change">
                 <div className="lang-change-flex">
                     <div className="current-lang">
@@ -43,7 +43,12 @@ const Header = () => {
                     </button>
                 </div>
             </div>
+
+            <ToTopBtn />
+
         </section>
+
+
     )
 }
 export default Header;
