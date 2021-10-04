@@ -4,6 +4,10 @@ import Pech2 from "../images/pechenje3-20.jpg";
 import Pech3 from "../images/pechenje3-12.jpg";
 import Pech4 from "../images/pechenje3-19.jpg";
 
+
+
+
+
 const Contact = () => {
     return (
         <section className="contact size mob-el" id="sec-three">
