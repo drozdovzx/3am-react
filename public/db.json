@@ -1,0 +1,36 @@
+{
+  "cookies": [
+    {
+      "id": 0,
+      "imageUrl": "../images/pechenje3-01.jpg",
+      "name": "First cookie",
+      "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
+      "price": 4,
+      "category": 1
+    },
+    {
+      "id": 1,
+      "imageUrl": "../images/pechenje3-12.jpg",
+      "name": "Second cookie",
+      "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
+      "price": 4,
+      "category": 1
+    },
+    {
+      "id": 2,
+      "imageUrl": "../images/pechenje3-19.jpg",
+      "name": "Third cookie",
+      "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
+      "price": 4,
+      "category": 1
+    },
+    {
+      "id": 3,
+      "imageUrl": "../images/pechenje3-20.jpg",
+      "name": "Fourth cookie",
+      "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
+      "price": 4,
+      "category": 0
+    }
+  ]
+}
