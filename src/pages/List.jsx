@@ -4,13 +4,15 @@ import { ListItem } from '../Components/';
 
 function List({ items }) {
     return (
-        <ul className="listContainer">
-            {items.map(obj => (
-                <ListItem key={obj.id} {...obj} />
-            ))
-            }
-        </ul>
-
+        <div className="listContainerMain">
+            <div className="listContainerName">List of the cookies</div>
+            <ul className="listContainer">
+                {items.map(obj => (
+                    <ListItem key={obj.id} {...obj} />
+                ))
+                }
+            </ul>
+        </div>
     );
 }
 

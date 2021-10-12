@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 function MenuItem ({ items }) {
     return (
@@ -6,7 +7,7 @@ function MenuItem ({ items }) {
             {
                 items.map((name, index) =>
                     <button onClick={() => alert(1)} key={`${name}_${index}`} className={"nav-link"}>
-                        {name}
+                        <FormattedMessage id = {name}  />
                     </button>)
             }
         </nav>

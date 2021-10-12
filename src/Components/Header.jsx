@@ -24,11 +24,11 @@ const Header = () => {
             </div>
 
             <Item items={[
-                'About',
-                'Cookies',
-                'Two ways',
-                'Team',
-                'Order'
+                'menu_item_1',
+                'menu_item_2',
+                'menu_item_3',
+                'menu_item_4',
+                'menu_item_5'
             ]}/>
 
             <div id="langChange" className="lang-change">

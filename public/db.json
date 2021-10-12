@@ -2,7 +2,7 @@
   "cookies": [
     {
       "id": 0,
-      "imageUrl": "../images/pechenje3-01.jpg",
+      "imageUrl": "https://github.com/drozdovzx/3am-react/blob/master/src/images/pechenje3-01.jpg?raw=true",
       "name": "First cookie",
       "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
       "price": 4,
@@ -10,7 +10,7 @@
     },
     {
       "id": 1,
-      "imageUrl": "../images/pechenje3-12.jpg",
+      "imageUrl": "https://github.com/drozdovzx/3am-react/blob/master/src/images/pechenje3-12.jpg?raw=true",
       "name": "Second cookie",
       "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
       "price": 4,
@@ -18,7 +18,7 @@
     },
     {
       "id": 2,
-      "imageUrl": "../images/pechenje3-19.jpg",
+      "imageUrl": "https://github.com/drozdovzx/3am-react/blob/master/src/images/pechenje3-19.jpg?raw=true",
       "name": "Third cookie",
       "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
       "price": 4,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "../images/pechenje3-20.jpg",
+      "imageUrl": "https://github.com/drozdovzx/3am-react/blob/master/src/images/pechenje3-20.jpg?raw=true",
       "name": "Fourth cookie",
       "text": "Loren ipsum blalbalbalblabl adbldabfa asdgv safdv asdv asdf sdaf sdfas",
       "price": 4,
