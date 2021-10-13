@@ -7,21 +7,26 @@ import { LOCALES } from './i18n/locales'
 import { messages } from './i18n/messages'
 
 function App() {
-    const locale = LOCALES.ENGLISH
+    function getInitialLocale() {
+        const savedLocale = localStorage.getItem('locale')
+        return savedLocale || LOCALES.ENGLISH
+    }
     const [cookies, setCookies] = React.useState([]);
-    React.useState(() => {
+    const [currentLocale, setCurrentLocale] = React.useState(getInitialLocale());
+    const handleChange = ({ target: { value } }) => {
+        setCurrentLocale(value);
+        localStorage.setItem('locale', value)
+    }
 
+    React.useState(() => {
         fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then(json => {
             setCookies(json.cookies);
         });
-
     }, [])
-
-    console.log(cookies);
     return (
-        <IntlProvider messages={messages[locale]} locale={locale} defaultLocale='LOCALES.ENGLISH'>
+        <IntlProvider messages={messages[getInitialLocale()]} locale={getInitialLocale()} defaultLocale='LOCALES.ENGLISH'>
             <div className="back">
-                <Header/>
+                <Header currentLocale={currentLocale} handleChange={handleChange} />
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/list' render={() => <List items={cookies}/>}/>
                 <Route exact path='/cart' component={Cart}/>

@@ -5,7 +5,7 @@ import { ListItem } from '../Components/';
 function List({ items }) {
     return (
         <div className="listContainerMain">
-            <div className="listContainerName">List of the cookies</div>
+            <span className="listContainerTitle">List container</span>
             <ul className="listContainer">
                 {items.map(obj => (
                     <ListItem key={obj.id} {...obj} />

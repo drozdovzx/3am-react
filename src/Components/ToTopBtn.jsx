@@ -28,7 +28,7 @@ export default function ScrollToTop() {
 
     return (
         <div onClick={scrollToTop} style={state ? {top: '100px'} : {top: '0'}} className="topBtn" title="Go to top">
-                <img alt="toTopBtn" src={toTopBtn}/>
+            <img alt="toTopBtn" src={toTopBtn}/>
         </div>
     );
 }
