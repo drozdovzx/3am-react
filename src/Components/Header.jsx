@@ -8,15 +8,27 @@ import Est from "../images/est.svg";
 import ToTopBtn from "../Components/ToTopBtn"
 import Item from "../Components/MenuItem";
 import {Link} from "react-router-dom";
-import {LOCALES} from "../i18n/locales";
-import Select from 'react-select'
+import { LOCALES } from "../i18n/locales";
 
 const languages = [
-    { name: 'ENG', imgSrc:{Eng}, code: LOCALES.ENGLISH },
-    { name: 'EST', imgSrc:{Est}, code: LOCALES.ESTONIAN },
-    { name: 'RUS', imgSrc:{Rus}, code: LOCALES.RUSSIAN }
+    { name: 'Eng', valueLang:"en-US", code: LOCALES.ENGLISH },
+    { name: 'Est', valueLang:"et-EE", code: LOCALES.ESTONIAN },
+    { name: 'Rus', valueLang:"ru-RU", code: LOCALES.RUSSIAN }
 ]
+
 const Header = ({ currentLocale, handleChange }) => {
+    const langCheck = () => {
+        for (let i = 0; i < languages.length; i++) {
+            if (languages[i].valueLang === currentLocale){
+                let a = "../images/Rus.svg"
+                return(
+                    <button>
+                        <img alt="curLang" src={"https://raw.githubusercontent.com/drozdovzx/3am-react/12e6e9c3abcddda45500f696718babd2b3fa3fac/src/images/est.svg"}/>
+                    </button>
+                )
+            }
+        }
+    }
     return (
 
         <section id="myHeader" className="header" >
@@ -40,15 +52,26 @@ const Header = ({ currentLocale, handleChange }) => {
 
             <div id="langChange" className="lang-change">
 
+                {langCheck()}
+
+                {languages.map(({name, code}) => (
+
+                    <button id={code} key={code} value={code}>
+                        <img alt={code} src={Eng} onClick={handleChange}/>
+                    </button>
+                ))}
+
+
+                {/*
                 <select id="language" onChange={handleChange} value={currentLocale}>
                     {languages.map(({name, code}) => (
-                        <option key={code} value={code}>
-                            {name}
+                        <option key={name} value={code}>
+                            <img alt="preloader1" src={{name}}/>
                         </option>
                     ))}
                 </select>
 
-                {/*<div className="lang-change-flex">
+                <div className="lang-change-flex">
                     <div className="current-lang">
                         <img alt="preloader1" src={Eng}/>
                     </div>
@@ -63,7 +86,7 @@ const Header = ({ currentLocale, handleChange }) => {
                 </div>*/}
             </div>
 
-            <ToTopBtn />
+            {/*<ToTopBtn />*/}
 
         </section>
 

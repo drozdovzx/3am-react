@@ -179,10 +179,14 @@ a {
   width: 80px;
   border: none;
 }
-
-select#language option[value="et-EE"]   { background-image:url(images/est.svg);   }
-select#language option[value="en-US"] { background-image:url(images/eng.svg); }
-select#language option[value="ru-RU"] { background-image:url(images/rus.svg); }
+.lang-change img{
+  border-radius: 60px;
+  width: 50px;
+  margin: 15px;
+}
+.lang-change button{
+  background-color: white;
+}
 
 .current-lang {
   margin: auto;

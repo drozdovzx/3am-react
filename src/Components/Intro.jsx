@@ -1,6 +1,7 @@
 import React from 'react'
 import Text from "../images/3amtext.svg";
 import { Link } from 'react-router-dom'
+import {FormattedMessage} from "react-intl";
 
 const Intro = () => {
     return (
@@ -10,7 +11,7 @@ const Intro = () => {
             </div>
             <Link to="/list">
                 <button className="shop">
-                    <span>Order now</span>
+                    <span><FormattedMessage id = "order_button"/></span>
                 </button>
             </Link>
         </section>

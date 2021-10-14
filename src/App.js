@@ -13,9 +13,10 @@ function App() {
     }
     const [cookies, setCookies] = React.useState([]);
     const [currentLocale, setCurrentLocale] = React.useState(getInitialLocale());
-    const handleChange = ({ target: { value } }) => {
-        setCurrentLocale(value);
-        localStorage.setItem('locale', value)
+    const handleChange = ({ target: { alt } }) => {
+        setCurrentLocale(alt);
+        console.log(alt)
+        localStorage.setItem('locale', alt)
     }
 
     React.useState(() => {
