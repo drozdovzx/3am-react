@@ -3,37 +3,39 @@ import Tom from "../images/tom.jpg";
 import Fara from "../images/fara.jpg";
 import Sass from "../images/sass.jpg";
 import Mark from "../images/mark.jpg";
+import {FormattedMessage} from "react-intl";
+
 
 const Tam = () => {
     return (
         <section className="tam size mob-el" id="sec-five">
-            <span className="our-team">We are 3AM</span>
+            <span className="our-team"><FormattedMessage id="tam_title"/></span>
             <div className="team" id="tom">
                 <img src={Tom} alt={"tom"}/>
-                <h1>Artjom</h1>
+                <h1><FormattedMessage id="tam_name_1"/></h1>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a>Our great leader and ideology creator. Main chief and just a good man.</a>
+                <a><FormattedMessage id="tam_text_1"/></a>
             </div>
 
             <div className="team" id="fara">
                 <img src={Fara} alt={"fara"}/>
-                <h1>Artjom</h1>
+                <h1><FormattedMessage id="tam_name_2"/></h1>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a>Without him our team is not our team. Creative director and corrector.</a>
+                <a><FormattedMessage id="tam_text_2"/></a>
             </div>
 
             <div className="team" id="sass">
                 <img src={Sass} alt={"sass"}/>
-                <h1>Aleksandr</h1>
+                <h1><FormattedMessage id="tam_name_3"/></h1>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a>IT-guy, who love cookies and beautiful girls.</a>
+                <a><FormattedMessage id="tam_text_3"/></a>
             </div>
 
             <div className="team" id="mark">
                 <img src={Mark} alt={"mark"}/>
-                <h1>Mark</h1>
+                <h1><FormattedMessage id="tam_name_4"/></h1>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a>Logistic guy, who have Camry 3.5 (not 3.5). PS. Mark zaebal buhatj na kazdih vihodnih</a>
+                <a><FormattedMessage id="tam_text_4"/></a>
             </div>
 
         </section>

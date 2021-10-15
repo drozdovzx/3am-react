@@ -15,7 +15,6 @@ function App() {
     const [currentLocale, setCurrentLocale] = React.useState(getInitialLocale());
     const handleChange = ({ target: { alt } }) => {
         setCurrentLocale(alt);
-        console.log(alt)
         localStorage.setItem('locale', alt)
     }
 

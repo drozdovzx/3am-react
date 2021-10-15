@@ -11,23 +11,37 @@ import {Link} from "react-router-dom";
 import { LOCALES } from "../i18n/locales";
 
 const languages = [
-    { name: 'Eng', valueLang:"en-US", code: LOCALES.ENGLISH },
-    { name: 'Est', valueLang:"et-EE", code: LOCALES.ESTONIAN },
-    { name: 'Rus', valueLang:"ru-RU", code: LOCALES.RUSSIAN }
+    { name: 'eng', valueLang:"en-US", code: LOCALES.ENGLISH },
+    { name: 'est', valueLang:"et-EE", code: LOCALES.ESTONIAN },
+    { name: 'rus', valueLang:"ru-RU", code: LOCALES.RUSSIAN }
 ]
 
 const Header = ({ currentLocale, handleChange }) => {
     const langCheck = () => {
         for (let i = 0; i < languages.length; i++) {
             if (languages[i].valueLang === currentLocale){
-                let a = "../images/Rus.svg"
+                let a = languages[i].name;
                 return(
-                    <button>
-                        <img alt="curLang" src={"https://raw.githubusercontent.com/drozdovzx/3am-react/12e6e9c3abcddda45500f696718babd2b3fa3fac/src/images/est.svg"}/>
+                    <button className="langBtn">
+                        <img alt={languages[i].valueLang} src={"https://raw.githubusercontent.com/drozdovzx/3am-react/12e6e9c3abcddda45500f696718babd2b3fa3fac/src/images/"+a+".svg"}/>
                     </button>
                 )
             }
         }
+    }
+    const langChange = () => {
+        const dataCollection = [];
+        for (let i = 0; i < languages.length; i++) {
+            if (languages[i].valueLang !== currentLocale){
+                let a = languages[i].name;
+                dataCollection.push(
+                <button id={languages[i].code} className="langBtn" key={languages[i].code} value={languages[i].code}>
+                    <img alt={languages[i].code} src={"https://raw.githubusercontent.com/drozdovzx/3am-react/12e6e9c3abcddda45500f696718babd2b3fa3fac/src/images/"+a+".svg"} onClick={handleChange}/>
+                </button>
+                )
+            }
+        }
+        return dataCollection;
     }
     return (
 
@@ -51,42 +65,13 @@ const Header = ({ currentLocale, handleChange }) => {
             ]}/>
 
             <div id="langChange" className="lang-change">
-
                 {langCheck()}
-
-                {languages.map(({name, code}) => (
-
-                    <button id={code} key={code} value={code}>
-                        <img alt={code} src={Eng} onClick={handleChange}/>
-                    </button>
-                ))}
-
-
-                {/*
-                <select id="language" onChange={handleChange} value={currentLocale}>
-                    {languages.map(({name, code}) => (
-                        <option key={name} value={code}>
-                            <img alt="preloader1" src={{name}}/>
-                        </option>
-                    ))}
-                </select>
-
-                <div className="lang-change-flex">
-                    <div className="current-lang">
-                        <img alt="preloader1" src={Eng}/>
-                    </div>
-                </div>
                 <div className="lang-change-window">
-                    <button className="svg-lang" onClick={handleChange} value={currentLocale} value={LOCALES.RUSSIAN}>
-                        <img alt="preloader1" src={Rus}/>
-                    </button>
-                    <button className="svg-lang" onClick={handleChange} value={currentLocale} value={LOCALES.ESTONIAN}>
-                        <img alt="preloader1" src={Est}/>
-                    </button>
-                </div>*/}
+                    {langChange()}
+                </div>
             </div>
 
-            {/*<ToTopBtn />*/}
+            <ToTopBtn />
 
         </section>
 

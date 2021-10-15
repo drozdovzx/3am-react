@@ -172,7 +172,7 @@ a {
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 121, 0, 0);
-  z-index: 10;
+  z-index: 16;
 }
 .lang-change select {
   height: 80px;
@@ -183,9 +183,13 @@ a {
   border-radius: 60px;
   width: 50px;
   margin: 15px;
+  border: 1px solid #c7c7c7;
 }
-.lang-change button{
+.langBtn{
   background-color: white;
+  max-height: 80px;
+  z-index: 15;
+  padding: 0;
 }
 
 .current-lang {
@@ -199,12 +203,12 @@ a {
   border-radius: 50px;
 }
 .lang-change:hover .lang-change-window{
-  transform: translateY(80px);
+  transform: translateY(0px);
   transition: .2s;
-  z-index: 1000;
+  z-index: 15;
 }
 .lang-change:not(:hover) .lang-change-window{
-  transform: translateY(-115px);
+  transform: translateY(-160px);
   transition: .2s;
 }
 .lang-change-window{
@@ -221,28 +225,6 @@ a {
   flex-direction: row;
   z-index: 1001;
   background: white;
-}
-.svg-lang {
-  cursor: pointer;
-  background-color: transparent;
-  width: 80px;
-  border: none;
-  margin: 5px auto;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-}
-.svg-lang img{
-  border-radius: 50px;
-  margin: 5px auto;
-  border: 1px solid #d8d8d8;
-}
-.dropdown-arrow{
-  color: white;
-  margin: auto auto;
-}
-.dropdown-arrow:after{
-  content: '\25ba';
 }
 
 /*____Intro____*/
@@ -718,7 +700,7 @@ img{
   margin: 80px 10%;
 }
 .listContainer{
-  margin: 100px auto 100px auto;
+  margin: 50px auto 100px auto;
   width: 80%;
   height: auto;
   display: grid;

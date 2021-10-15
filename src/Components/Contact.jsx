@@ -2,6 +2,7 @@ import Pech1 from "../images/pechenje3-01.jpg";
 import Pech2 from "../images/pechenje3-20.jpg";
 import Pech3 from "../images/pechenje3-12.jpg";
 import Pech4 from "../images/pechenje3-19.jpg";
+import {FormattedMessage} from "react-intl";
 
 export default function Contact() {
     let a = 0;
@@ -68,36 +69,20 @@ export default function Contact() {
                 </div>
 
                 <div className="active2 text-down">
-                    <h1>First cookie</h1>
-                    <span>
-                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
-                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
-                asdafasdfsda asd fasd sadf asdf
-            </span>
+                    <h1><FormattedMessage id="contact_text_title_1"/></h1>
+                    <span><FormattedMessage id="contact_text_1"/></span>
                 </div>
                 <div className="active2">
-                    <h1>Second cookie</h1>
-                    <span>
-                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
-                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
-                asdafasdfsda asd fasd sadf asdf
-            </span>
+                    <h1><FormattedMessage id="contact_text_title_2"/></h1>
+                    <span><FormattedMessage id="contact_text_2"/></span>
                 </div>
                 <div className="active2">
-                    <h1>Third cookie</h1>
-                    <span>
-                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
-                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
-                asdafasdfsda asd fasd sadf asdf
-            </span>
+                    <h1><FormattedMessage id="contact_text_title_3"/></h1>
+                    <span><FormattedMessage id="contact_text_3"/></span>
                 </div>
                 <div className="active2">
-                    <h1>Four cookie</h1>
-                    <span>
-                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
-                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
-                asdafasdfsda asd fasd sadf asdf
-            </span>
+                    <h1><FormattedMessage id="contact_text_title_4"/></h1>
+                    <span><FormattedMessage id="contact_text_4"/></span>
                 </div>
 
                 <button className="btn-left btn-both" onClick={toLeft}>
