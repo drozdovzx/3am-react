@@ -2,7 +2,7 @@ import React from 'react';
 import {FormattedMessage} from "react-intl";
 
 
-function ListItem({ id, name, text, urlMain, price, onAddCookie}){
+function ListItem({ id, name, text, urlMain, price,addedCookies, onAddCookie}){
     const AddCookie = () => {
         const obj = {
             id,
@@ -21,7 +21,10 @@ function ListItem({ id, name, text, urlMain, price, onAddCookie}){
                 <div className="listBtns">
                     <input defaultValue={1}/><span><FormattedMessage id="tk"/></span>
                     <button onClick={AddCookie} className="listContainerBtn">
-                        <FormattedMessage id="add_to_cart"/>
+                        <span>
+                            <FormattedMessage id="add_to_cart"/>
+                        </span>
+                        {addedCookies && <div className="addedCookies"><i>{addedCookies}</i></div>}
                     </button>
                 </div>
 

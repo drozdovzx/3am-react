@@ -2,11 +2,18 @@ import React from 'react';
 import {} from '../Components/';
 import { ListItem } from '../Components/';
 import {FormattedMessage} from "react-intl";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import cart from "../redux/reducers/cart";
 
 function List({ items }) {
     const dispatch = useDispatch();
+    const cartItems = useSelector(({ cart }) => cart.items);
+    console.log(cartItems);
     const addToCart = (obj) => {
+        dispatch({
+            type: 'ADD_COOKIE_CART',
+            payload: obj,
+        })
         console.log(obj);
     };
     return (
@@ -14,7 +21,12 @@ function List({ items }) {
             <span className="listContainerTitle"><FormattedMessage id="list_name_1"/></span>
             <ul className="listContainer">
                 {items.map(obj => (
-                    <ListItem onAddCookie={addToCart} key={obj.id} {...obj} />
+                    <ListItem
+                        onAddCookie={addToCart}
+                        key={obj.id}
+                        {...obj}
+                        addedCookies={cartItems[obj.id] && cartItems[obj.id].length}
+                    />
                 ))
                 }
             </ul>
