@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'PlaylistScript';
-  src: url('./fonts/PlaylistScript.eot');
-  src: local('☺'), url('./fonts/PlaylistScript.woff') format('woff'), url('./fonts/PlaylistScript.ttf') format('truetype'), url('./fonts/PlaylistScript.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 button{
   background-color: transparent;
@@ -65,7 +59,6 @@ a {
   background-color: #555;
 }
 
-
 .body{
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
@@ -85,11 +78,11 @@ a {
   z-index: 10000;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   transition: .2s linear;
   background-color: #fff;
   height: 80px;
+  justify-content: space-between;
 }
 .size{
   height: 100vh;
@@ -105,8 +98,8 @@ a {
 .logo {
   height: 100%;
   padding: 12px;
-  position: absolute;
-  left: 0;
+  /*position: absolute;
+  left: 0;*/
 }
 .logo-img{
   height: 100%;
@@ -161,12 +154,117 @@ a {
   display: none;
 }
 
+/*cart*/
+.cartBtnContainer{
+  display: flex;
+  flex-direction: row;
+}
+.cartBtnImg {
+  margin-right: 20px;
+}
+.cartBtnImg img {
+  max-height: 40px;
+}
+.cartBtnSum{
+  color: #000000;
+  text-decoration: none;
+  transition: color .2s linear;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  vertical-align: top;
+}
+.cartContainer{
+  width: 100%;
+  height: auto;
+}
+.cartInnerContainer{
+  width: 90%;
+  min-height: 300px;
+  background-color: white;
+  border-radius: 60px;
+  margin: 160px auto 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.cartInnerContainer ul{
+  padding: 25px 0 50px 0;
+  margin: 0;
+}
+.cartContainerText{
+  background-color: transparent;
+  width: 90%;
+  height: 100%;
+  padding: 22px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cartContainerContent input{
+  max-width: 70px;
+}
+.cartContainerHeader{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  text-align: center;
+}
+.cartContainerContent{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+}
+.cartInnerContainer span{
+  color: #000000;
+  text-decoration: none;
+  transition: color .2s linear;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  font-weight: normal;
+  vertical-align: top;
+  margin: 20px 50px 0 50px;
+
+}
+.cartInnerContainer ul li {
+  border: 1px solid black;
+  border-radius: 60px;
+  width: 80%;
+  height: 400px;
+  margin: 50px auto auto auto;
+  display: flex;
+  flex-direction: row;
+}
+.cartInnerContainer ul li:hover {
+  transform: scale(1.025);
+  transition: .2s;
+}
+.cartInnerContainer ul li:not(:hover) {
+  transform: scale(1);
+  transition: .2s;
+}
+.cartListImg{
+  height: 100%;
+  display: flex;
+}
+.cartListImg img{
+  max-height: 80%;
+  border-radius: 40px;
+  margin: auto auto auto 37px;
+}
+.cartOrder {
+  height: 200px;
+  width: 100%;
+  display: flex;
+}
 
 /*langchange*/
 .lang-change {
-  top: 0;
+  /*top: 0;
   position: absolute;
-  right: 0;
+  right: 0;*/
   height: 100%;
   width: auto;
   display: flex;
@@ -188,7 +286,8 @@ a {
 .langBtn{
   background-color: white;
   max-height: 80px;
-  z-index: 15;
+  max-width: 80px;
+  z-index: 16;
   padding: 0;
 }
 
@@ -214,7 +313,10 @@ a {
 .lang-change-window{
   background-color: #ffffff;
   max-width: 80px;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 .lang-change-flex{
   height: 80px;
@@ -714,7 +816,7 @@ img{
   border-radius: 70px;
   margin: auto;
   width: 100%;
-  height: 700px;
+  /*height: 700px;*/
 }
 .listContainer li:hover {
   transform: scale(1.025);
@@ -766,6 +868,31 @@ img{
 }
 .listContainerBtn:hover {
   box-shadow: 0 0 6px rgb(0 0 0 / 50%);
+}
+ul {
+  list-style-type: none;
+}
+.listBtns{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.listBtns .listContainerBtn{
+  margin: auto auto auto 20px ;
+}
+input, .listBtns span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: justify;
+}
+.listBtns span{
+  margin: auto 0 auto 0;
+}
+.listBtns input {
+  width: 80px;
+  height: 43px;
+  margin: auto 0 auto 0;
 }
 
 /*_____Footer Buttons_____*/

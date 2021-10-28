@@ -41,6 +41,12 @@ export const messages = {
         list_item_text_3: 'Waltz, bad nymph, for quick jigs vex. Glib jocks quiz nymph to vex dwarf. Sphinx of black quartz, judge my vow.',
         list_item_text_4: 'Waltz, bad nymph, for quick jigs vex. Glib jocks quiz nymph to vex dwarf. Sphinx of black quartz, judge my vow.',
         add_to_cart: 'Add to cart',
+        cart_1: 'Cart',
+        remove_from_cart: 'Remove',
+        total_amount: 'Amount',
+        total_price: 'Price',
+        cart_order: 'Order',
+        tk: 'tk',
     },
     [LOCALES.RUSSIAN]: {
         menu_item_1: 'О нас',
@@ -82,6 +88,12 @@ export const messages = {
         list_item_text_3: 'Съешь этих мягких французских булок, да выпей чаю, а потом съешь ещё этих мягких французских булок.',
         list_item_text_4: 'Съешь этих мягких французских булок, да выпей чаю, а потом съешь ещё этих мягких французских булок.',
         add_to_cart: 'Добавить',
+        cart_1: 'Корзина',
+        remove_from_cart: 'Убрать',
+        total_amount: 'Количество',
+        total_price: 'Цена',
+        cart_order: 'Заказать',
+        tk: 'шт',
     },
     [LOCALES.ESTONIAN]: {
         menu_item_1: 'Meie lugu',
@@ -121,5 +133,11 @@ export const messages = {
         list_item_text_3: 'Punaarmee hõivas suurema osa Poolast, vallutades 17. jaanuaril Varssavi, 19. jaanuaril ...',
         list_item_text_4: 'Nõukogude väed tungisid läbi Tšehhimaa ning vallutasid Bratislava 4. aprillil. Praha langes 9. mail.',
         add_to_cart: 'Lisa',
+        cart_1: 'Ostukorv',
+        remove_from_cart: 'Eemalda',
+        total_amount: 'Kokku',
+        total_price: 'Hind',
+        cart_order: 'Tellida',
+        tk: 'tk',
     }
 }

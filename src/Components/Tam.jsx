@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react'
 import Tom from "../images/tom.jpg";
 import Fara from "../images/fara.jpg";
 import Sass from "../images/sass.jpg";
@@ -7,8 +7,9 @@ import {FormattedMessage} from "react-intl";
 
 
 const Tam = () => {
+    const titleRef = useRef()
     return (
-        <section className="tam size mob-el" id="sec-five">
+        <section ref={titleRef} className="tam size mob-el" id="sec-five">
             <span className="our-team"><FormattedMessage id="tam_title"/></span>
             <div className="team" id="tom">
                 <img src={Tom} alt={"tom"}/>

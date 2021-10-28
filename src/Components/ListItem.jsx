@@ -2,16 +2,29 @@ import React from 'react';
 import {FormattedMessage} from "react-intl";
 
 
-function ListItem({ imageUrl, name, text }){
+function ListItem({ id, name, text, urlMain, price, onAddCookie}){
+    const AddCookie = () => {
+        const obj = {
+            id,
+            name,
+            price,
+            urlMain,
+        }
+        onAddCookie(obj)
+    }
     return (
         <li>
-            <img src={ imageUrl } alt="qwe"/>
+            <img src={ urlMain } alt={urlMain}/>
             <div className="listContainerText">
                 <div className="listContainerHeader"><FormattedMessage id={ name }/></div>
                 <div className="listContainerContent"><FormattedMessage id={ text }/></div>
-                <button className="listContainerBtn">
-                    <FormattedMessage id="add_to_cart"/>
-                </button>
+                <div className="listBtns">
+                    <input defaultValue={1}/><span><FormattedMessage id="tk"/></span>
+                    <button onClick={AddCookie} className="listContainerBtn">
+                        <FormattedMessage id="add_to_cart"/>
+                    </button>
+                </div>
+
             </div>
         </li>
     )

@@ -25,12 +25,12 @@ function App() {
     }, [])
     return (
         <IntlProvider messages={messages[getInitialLocale()]} locale={getInitialLocale()} defaultLocale='LOCALES.ENGLISH'>
+            <Header currentLocale={currentLocale} handleChange={handleChange}/>
             <div className="back">
-                <Header currentLocale={currentLocale} handleChange={handleChange} />
-                <Route exact path='/' component={Home}/>
-                <Route exact path='/list' render={() => <List items={cookies}/>}/>
-                <Route exact path='/cart' component={Cart}/>
-                <Footer/>
+                    <Route exact path='/main' component={Home}/>
+                    <Route exact path='/list' render={() => <List items={cookies}/>}/>
+                    <Route exact path='/cart' render={() => <Cart items={cookies}/>}/>
+                    <Footer/>
             </div>
         </IntlProvider>
 

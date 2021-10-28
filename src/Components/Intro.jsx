@@ -5,7 +5,7 @@ import {FormattedMessage} from "react-intl";
 
 const Intro = () => {
     return (
-        <section className="intro size" id="sec-one">
+        <section className="intro size" name="myScrollToElement" id="sec-one">
             <div className="intro-text">
                 <img alt="3amtext" src={Text}/>
             </div>
