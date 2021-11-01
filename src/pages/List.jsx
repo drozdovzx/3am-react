@@ -3,7 +3,6 @@ import {} from '../Components/';
 import { ListItem } from '../Components/';
 import {FormattedMessage} from "react-intl";
 import {useDispatch, useSelector} from "react-redux";
-import cart from "../redux/reducers/cart";
 
 function List({ items }) {
     const dispatch = useDispatch();

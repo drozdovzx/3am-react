@@ -1,12 +1,12 @@
 import React from 'react';
 import Logo from "../images/logo.svg";
 import Strips from "../images/Main-menu-strips.svg";
-
 import Cart from "../Components/Cart"
 import ToTopBtn from "../Components/ToTopBtn"
 import MenuItem from "../Components/MenuItem";
 import {Link} from "react-router-dom";
 import { LOCALES } from "../i18n/locales";
+import {HashLink} from "react-router-hash-link";
 
 const languages = [
     { name: 'eng', valueLang:"en-US", code: LOCALES.ENGLISH },
@@ -43,13 +43,12 @@ const Header = ({ currentLocale, handleChange }) => {
         return dataCollection;
     }
     return (
-
         <section id="myHeader" className="header" >
             <div id="white-back"/>
             <button className="logo" id="logo">
-                <Link to="/main">
+                <HashLink to="/#sec-one">
                     <img className="logo-img" alt="Logo" src={Logo}/>
-                </Link>
+                </HashLink>
             </button>
             <div className="menu-btn" id="menu-btn">
                 <img alt="Strips" src={Strips} className="menu-btn-img"/>
@@ -62,10 +61,10 @@ const Header = ({ currentLocale, handleChange }) => {
                 'menu_item_4',
                 'menu_item_5'
             ]} items1={[
-                '/main',
-                '/main',
-                '/main',
-                '/main',
+                '/',
+                '/',
+                '/',
+                '/',
                 '/list'
             ]} items2={[
                 'sec-two',
@@ -75,15 +74,16 @@ const Header = ({ currentLocale, handleChange }) => {
                 ''
             ]}/>
 
-            <Cart/>
-            <div id="langChange" className="lang-change">
-                {langCheck()}
-                <div className="lang-change-window">
-                    {langChange()}
+            <div className="cartAndLang">
+                <Cart/>
+                <div id="langChange" className="lang-change">
+                    {langCheck()}
+                    <div className="lang-change-window">
+                        {langChange()}
+                    </div>
                 </div>
             </div>
-
-            <ToTopBtn />
+            <ToTopBtn/>
 
         </section>
 

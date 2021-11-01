@@ -111,6 +111,7 @@ a {
   font-size: 14px;
   text-transform: uppercase;
   transition: .2s;
+  margin: auto;
 }
 .nav-link{
   color: #000000;
@@ -153,17 +154,28 @@ a {
 #white-back{
   display: none;
 }
+.cartAndLang{
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+.cartAndLang a{
+
+}
 
 /*cart*/
 .cartBtnContainer{
   display: flex;
   flex-direction: row;
+  height: 80px;
 }
 .cartBtnImg {
   margin-right: 20px;
+  display: flex;
 }
 .cartBtnImg img {
   max-height: 40px;
+  margin: auto;
 }
 .cartBtnSum{
   color: #000000;
@@ -173,6 +185,11 @@ a {
   font-size: 30px;
   font-weight: normal;
   vertical-align: top;
+  width: max-content;
+  display: flex;
+}
+.cartBtnSum span {
+  margin: auto;
 }
 .cartContainer{
   width: 100%;
@@ -888,7 +905,7 @@ img{
   margin: auto;
 }
 .listContainerBtn span {
-  margin: auto;
+  margin: auto !important;
 }
 ul {
   list-style-type: none;
@@ -1104,5 +1121,12 @@ button.soc-link:not(:hover) {
 
   @viewport {
     user-zoom: fixed;
+  }
+}
+
+
+@media only screen and (max-width: 1360px) {
+  .nav-link{
+    margin: 0 20px 0 0;
   }
 }

@@ -1,11 +1,9 @@
 import toTopBtn from "../images/toTopBtn.svg";
-
 import React, { useEffect, useState } from "react";
 
 export default function ScrollToTop() {
     const [state, setState] = useState(false);
 
-    // Show button when page is scorlled upto given distance
     const toggleVisibility = () => {
         console.log(state)
         if (window.pageYOffset > 10) {
@@ -14,14 +12,12 @@ export default function ScrollToTop() {
             setState(false);
         }
     };
-
     const scrollToTop = () => {
         window.scrollTo({
             top: "100px",
             behavior: "smooth"
         });
     };
-
     useEffect(() => {
         window.addEventListener("scroll", toggleVisibility);
     }, []);
