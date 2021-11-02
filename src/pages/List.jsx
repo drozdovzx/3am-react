@@ -24,7 +24,7 @@ function List({ items }) {
                         onAddCookie={addToCart}
                         key={obj.id}
                         {...obj}
-                        addedCookies={cartItems[obj.id] && cartItems[obj.id].length}
+                        addedCookies={cartItems[obj.id] && cartItems[obj.id].items.length}
                     />
                 ))
                 }

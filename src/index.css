@@ -83,6 +83,7 @@ a {
   background-color: #fff;
   height: 80px;
   justify-content: space-between;
+  box-shadow: 0 7px 35px -14px #6e6e6e;
 }
 .size{
   height: 100vh;
@@ -191,9 +192,10 @@ a {
 .cartBtnSum span {
   margin: auto;
 }
-.cartContainer{
+.cartContainer {
   width: 100%;
-  height: auto;
+  min-height: calc(100vh - 80px);
+  margin-top: 125px;
 }
 .cartInnerContainer{
   width: 90%;
@@ -203,6 +205,7 @@ a {
   margin: 160px auto 50px auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .cartInnerContainer ul{
   padding: 25px 0 50px 0;
@@ -275,6 +278,82 @@ a {
   height: 200px;
   width: 100%;
   display: flex;
+}
+.clearCart {
+  position: absolute;
+  height: 70px;
+  width: auto;
+  top: 35px;
+  right: 35px;
+  display: flex;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px;
+  background-color: #dddddd;
+  cursor: pointer;
+}
+.clearCart:hover {
+  box-shadow: 0 0 6px rgb(0 0 0 / 50%);
+}
+.clearCart span {
+  font-size: 25px;
+  margin: auto 20px;
+}
+.cartCounters {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cookieCount {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+  margin: auto;
+}
+.emptyCart {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  background-color: white;
+  font-family: 'Montserrat';
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 60px;
+}
+.emptyCartText{
+  height: 100%;
+  width: 100%;
+  flex: 2;
+  display: flex;
+}
+.emptyCart span {
+  margin: auto;
+}
+.emptyCartBtn{
+  flex: 1;
+  display: flex;
+}
+.buttonToMain {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  margin: auto;
+  width: auto;
+  height: 60px;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px;
+  background-color: #dddddd;
+  cursor: pointer;
+  display: flex;
+}
+.buttonToMain span{
+  margin: auto 20px;
+}
+.buttonToMain:hover{
+  box-shadow: 0 0 6px rgb(0 0 0 / 50%);
 }
 
 /*langchange*/
@@ -882,6 +961,7 @@ img{
   border: 1px solid #b3b3b3;
   border-radius: 20px;
   background-color: #dddddd;
+  cursor: pointer;
 }
 .listContainerBtn:hover {
   box-shadow: 0 0 6px rgb(0 0 0 / 50%);
