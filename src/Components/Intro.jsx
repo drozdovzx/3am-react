@@ -9,7 +9,7 @@ const Intro = () => {
             <div className="intro-text">
                 <img alt="3amtext" src={Text}/>
             </div>
-            <HashLink  to="/#sec-four">
+            <HashLink  to="/list">
                 <button className="shop">
                     <span><FormattedMessage id = "order_button"/></span>
                 </button>

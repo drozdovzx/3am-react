@@ -5,7 +5,6 @@ export default function ScrollToTop() {
     const [state, setState] = useState(false);
 
     const toggleVisibility = () => {
-        console.log(state)
         if (window.pageYOffset > 10) {
             setState(true);
         } else {
@@ -23,7 +22,7 @@ export default function ScrollToTop() {
     }, []);
 
     return (
-        <div onClick={scrollToTop} style={state ? {top: '100px'} : {top: '0'}} className="topBtn" title="Go to top">
+        <div onClick={scrollToTop} className={`topBtn ${state ? " topBtnMargin" : ""}`} title="Go to top">
             <img alt="toTopBtn" src={toTopBtn}/>
         </div>
     );

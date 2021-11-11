@@ -58,6 +58,9 @@ a {
 .topBtn:hover {
   background-color: #555;
 }
+.topBtnMargin{
+  top: 100px;
+}
 
 .body{
   font-family: 'Montserrat', sans-serif;
@@ -159,9 +162,10 @@ a {
   display: flex;
   flex-direction: row;
   height: 80px;
+  z-index: 16;
 }
 .cartAndLang a{
-
+  display: flex;
 }
 
 /*cart*/
@@ -169,6 +173,7 @@ a {
   display: flex;
   flex-direction: row;
   height: 80px;
+  margin: auto;
 }
 .cartBtnImg {
   margin-right: 20px;
@@ -1086,13 +1091,87 @@ button.soc-link:not(:hover) {
   .footer{
     z-index: 6;
   }
-
   html{
     scroll-snap-type: none;
   }
-  .lang-change {
-    display: none;
+
+  /*Header*/
+  .header{
+    background-color: rgba(255, 255, 255, 0);
+    flex-direction: row-reverse;
+    height: 16vw;
+    box-shadow: none;
   }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 706px;
+    transform: translateY(-100%);
+    transition: .4s;
+    width: 46vw;
+  }
+  .logo{
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16vw;
+    height: 16vw;
+    position: absolute;
+    filter: invert(1);
+  }
+
+
+  /*Cart*/
+  .cartBtnSum {
+    font-size: 6vw;
+  }
+  .cartAndLang {
+    display: flex;
+    flex-direction: row;
+    height: 16vw;
+    filter: invert(1);
+  }
+  .cartBtnImg img{
+    max-height: 8vw;
+  }
+
+
+  /*Language*/
+  .lang-change {
+    filter: invert(1);
+    background-color: transparent;
+  }
+  .langBtn{
+    height: 100%;
+  }
+  .lang-change-window, .langBtn{
+    background-color: transparent;
+  }
+  .lang-change-window{
+    position: absolute;
+  }
+  .langBtn{
+    margin: auto;
+    max-width: none;
+    max-height: none;
+  }
+  .lang-change:hover .lang-change-window{
+    top: 16vw;
+    transition: .5s;
+    z-index: 15;
+  }
+  .lang-change:not(:hover) .lang-change-window{
+    top: -80px;
+    transition: .5s;
+  }
+  .lang-change img{
+    width: 80px;
+  }
+
+
   #white-back{
     z-index: 7;
     width: 100vw;
@@ -1105,14 +1184,6 @@ button.soc-link:not(:hover) {
     transform: translateX(-100vw);
     transition: .2s;
 
-  }
-  .logo{
-    z-index: 100;
-    right: 0;
-    left: auto;
-    top: 0;
-    width: 16vw;
-    height: 16vw;
   }
   .col-chng{
     fill: white !important;
@@ -1128,19 +1199,18 @@ button.soc-link:not(:hover) {
   .shop span{
     font-size: 60px;
   }
-  .nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-100%);
-    transition: .4s;
-    width: 100vw;
+  .topBtn{
+    height: 14vw;
+    width: 14vw;
+    margin: 1vw;
+    opacity: 0;
   }
-  .header{
-    background-color: rgba(255, 255, 255, 0);
+  .topBtnMargin{
+    top: calc(16vw + 10px);
+    opacity: 1;
   }
+
+
   .menu-btn-img{
     height: 60%;
     width: 60%;
@@ -1163,6 +1233,8 @@ button.soc-link:not(:hover) {
     margin: 0;
     padding: 10px 20px;
     font-size: 60px;
+    width: 100%;
+    text-align: left;
   }
   .text-about{
     width: 60%;

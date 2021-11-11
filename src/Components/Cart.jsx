@@ -3,7 +3,7 @@ import CartImg from '../images/cart.svg';
 import {HashLink} from "react-router-hash-link";
 import {useSelector} from "react-redux";
 
-function Cart(){
+const Cart = ({state}) => {
 
     const {totalPrice} = useSelector(({ cart }) => cart);
 
@@ -11,10 +11,10 @@ function Cart(){
         <HashLink to="/cart">
         <div className="cartBtnContainer">
             <div className="cartBtnImg">
-                <img alt="cartImg" src={CartImg}/>
+                <img style={state ? {filter: 'invert(1)'} : {transitionDelay: '.3s', filter: 'invert(0)'}} alt="cartImg" src={CartImg}/>
             </div>
             <div className="cartBtnSum">
-                <span>
+                <span style={state ? {filter: 'invert(1)'} : {transitionDelay: '.3s', filter: 'invert(0)'}}>
                     {totalPrice} €
                 </span>
             </div>
