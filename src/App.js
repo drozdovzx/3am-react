@@ -19,7 +19,7 @@ function App() {
     }
 
     React.useState(() => {
-        fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then(json => {
+        fetch('https://backery-3am.herokuapp.com/db.json').then((resp) => resp.json()).then(json => {
             setCookies(json.cookies);
         });
     }, [])
