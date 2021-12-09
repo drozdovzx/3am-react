@@ -2,12 +2,12 @@ import { LOCALES } from './locales'
 
 export const messages = {
     [LOCALES.ENGLISH]: {
-        menu_item_1: 'About',
-        menu_item_2: 'Cookies',
-        menu_item_3: 'Two ways',
-        menu_item_4: 'Team',
+        menu_item_1: 'Shop',
+        menu_item_2: 'About',
+        menu_item_3: 'Menu',
+        menu_item_4: 'Create',
         menu_item_5: 'Order',
-        order_button: 'Order now',
+        order_button: 'More',
         about_1: 'Story about our Bakery',
         about_2: 'We tried our best, that anyone could choose favorite cookie. Not just by the taste, but\n' +
             'also by the\n' +
@@ -54,18 +54,16 @@ export const messages = {
         tk: 'tk',
     },
     [LOCALES.RUSSIAN]: {
-        menu_item_1: 'О нас',
-        menu_item_2: 'Печеньки',
-        menu_item_3: 'Два пути',
-        menu_item_4: 'Коллектив',
+        menu_item_1: 'Купить',
+        menu_item_2: 'О нас',
+        menu_item_3: 'Меню',
+        menu_item_4: 'Создай',
         menu_item_5: 'Заказать',
-        order_button: 'Заказать',
+        order_button: 'Больше',
         about_1: 'История о нашей пекарне',
-        about_2: 'Мы делаем всё возможное, что бы вы смогли выбрать Ваше любимое печенье. Не только по вкусу, но \n' +
-            'также и по \n' +
-            'жизненному пути. Веганские, оздоровительные, палео, без сахарп, без глютена, мало калорийные или наши классические \n' +
-            'печенья,\n' +
-            'всё, что вы можете найти тут.',
+        about_2: 'Компания друзей и уникальная выпечка- это 3AM Bakery.Печенье и брауни составляют основу нашей пекарни.' +
+            '  С радостью предлагаем вам выпечку только с лучшими доступными ингридиентами и разнообразием вкусов.  ' +
+            'Закажите онлайн полюбившееся печенье или брауни и мы бесплатно доставим лучшее вам.',
         contact_text_title_1: 'Первое печенье',
         contact_text_title_2: 'Второе печенье',
         contact_text_title_3: 'Третье печенье',
@@ -106,12 +104,12 @@ export const messages = {
         tk: 'шт',
     },
     [LOCALES.ESTONIAN]: {
-        menu_item_1: 'Meie lugu',
-        menu_item_2: 'Küpsised',
-        menu_item_3: 'Kaks teed',
-        menu_item_4: 'Kollektiiv',
+        menu_item_1: 'Osta',
+        menu_item_2: 'Meist',
+        menu_item_3: 'Menüü',
+        menu_item_4: 'Luua',
         menu_item_5: 'Tellida',
-        order_button: 'Tellida',
+        order_button: 'Rohkem',
         about_1: 'Lugu meie pagarist',
         about_2: 'Ma ei viitsi seda tõlkida ja selle pärast ma jutustan teile väige lugu.\n' +
             'Mmmm, ei ole, ei taha.\n' +

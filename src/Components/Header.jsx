@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Th from "../images/logo.svg";
 import Logo from "../images/logo.svg";
 import Strips from "../images/Main-menu-strips.svg";
 import Cart from "../Components/Cart"
@@ -69,19 +70,17 @@ const Header = ({ currentLocale, handleChange }) => {
                 'menu_item_2',
                 'menu_item_3',
                 'menu_item_4',
-                'menu_item_5'
             ]} items1={[
+                '/list',
                 '/',
                 '/',
                 '/',
-                '/',
-                '/list'
             ]} items2={[
+                '',
                 'sec-two',
                 'sec-three',
                 'sec-four',
                 'sec-five',
-                ''
             ]}/>
 
             <div className="cartAndLang">

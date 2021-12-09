@@ -2,6 +2,8 @@ import React from 'react'
 import Text from "../images/3amtext.svg";
 import {HashLink} from "react-router-hash-link";
 import {FormattedMessage} from "react-intl";
+import Logo from "../images/logo.svg";
+
 
 const Intro = () => {
     return (

@@ -5,6 +5,7 @@ import {FormattedMessage} from "react-intl";
 const About = () => {
     return (
         <section className="about size mob-el" id="sec-two">
+            <div style={{display: 'none'}} className="dividedBack"/>
             <div className="about-con">
                 <div className="text-about">
                     <h1><FormattedMessage id = "about_1"/></h1>
