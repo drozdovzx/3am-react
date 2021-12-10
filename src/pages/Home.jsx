@@ -7,9 +7,9 @@ function Home() {
     return(
         <div>
             <Intro />
-            <About />
             <Contact />
             <TwoWays />
+            <About />
             <Tam />
         </div>
     );

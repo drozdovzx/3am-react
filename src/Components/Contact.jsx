@@ -3,6 +3,7 @@ import Pech2 from "../images/pechenje3-20.jpg";
 import Pech3 from "../images/pechenje3-12.jpg";
 import Pech4 from "../images/pechenje3-19.jpg";
 import {FormattedMessage} from "react-intl";
+import React from "react";
 
 export default function Contact() {
     let a = 0;
@@ -69,20 +70,36 @@ export default function Contact() {
                 </div>
 
                 <div className="active2 text-down">
-                    <h1><FormattedMessage id="contact_text_title_1"/></h1>
-                    <span><FormattedMessage id="contact_text_1"/></span>
+                    <div className="containerInContainer">
+                        <span>First</span>
+                    </div>
+                    <div className="btnInContainer">
+                        <span>More cookie</span>
+                    </div>
                 </div>
                 <div className="active2">
-                    <h1><FormattedMessage id="contact_text_title_2"/></h1>
-                    <span><FormattedMessage id="contact_text_2"/></span>
+                    <div className="containerInContainer">
+                        <span>Second cookie</span>
+                    </div>
+                    <div className="btnInContainer">
+                        <span>More</span>
+                    </div>
                 </div>
                 <div className="active2">
-                    <h1><FormattedMessage id="contact_text_title_3"/></h1>
-                    <span><FormattedMessage id="contact_text_3"/></span>
+                    <div className="containerInContainer">
+                        <span>Third cookie</span>
+                    </div>
+                    <div className="btnInContainer">
+                        <span>More</span>
+                    </div>
                 </div>
                 <div className="active2">
-                    <h1><FormattedMessage id="contact_text_title_4"/></h1>
-                    <span><FormattedMessage id="contact_text_4"/></span>
+                    <div className="containerInContainer">
+                        <span>Fourth cookie</span>
+                    </div>
+                    <div className="btnInContainer">
+                        <span>More</span>
+                    </div>
                 </div>
 
                 <button className="btn-left btn-both" onClick={toLeft}>

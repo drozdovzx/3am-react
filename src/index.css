@@ -89,7 +89,7 @@ a {
   box-shadow: 0 7px 35px -14px #6e6e6e;
 }
 .size{
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   scroll-snap-align: center;
   position: relative;
@@ -161,6 +161,8 @@ a {
   display: none;
 }
 .cartAndLang{
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -518,10 +520,12 @@ a {
 .text-about{
   width: 90%;
   font-family: 'Montserrat', sans-serif;
-  margin: auto 10%;
+  /*margin: auto 10%;*/
 }
 .text-about h1{
   font-size: 55px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .text-about h2{
   font-size: 30px;
@@ -575,6 +579,7 @@ a {
 .contact{
   display: flex;
   flex-direction: column;
+  background-color: #ffecd1;
 }
 .map-interactive{
   height: calc(100vh - 80px);
@@ -621,7 +626,7 @@ a {
 }
 .next{
   transform: translate(85%, calc(50vh - 50%)) scale(0.9);
-  filter: grayscale(1) brightness(20%);
+  filter: grayscale(1) brightness(35%) blur(2px);
   z-index: 10;
   transition-duration: .9s;
 }
@@ -674,6 +679,7 @@ img{
   z-index: 1000;
   right: 20vw;
   top: -10vh;
+  opacity: 0;
   transform: translateY(-50%);
   visibility: hidden;
   transition-duration: .9s;
@@ -683,14 +689,15 @@ img{
   visibility: visible;
   transform: translateY(calc(50vh - 50%));
   transition-duration: .9s;
-
+  top: 0;
+  opacity: 1;
 }
 
 /*____Two ways____*/
 .threeSections{
   display: flex;
   flex-direction: row;
-  background-color: #ffecd1;
+  background-color: white;
 }
 .threeSectionsSub{
   display: flex;
@@ -705,6 +712,9 @@ img{
   color: #1a1a1a;
   top: 126px;
   right: 155px;
+}
+.twoWaysLogo span {
+  text-transform: uppercase;
 }
 .containerInSection{
   height: 400px;
@@ -749,6 +759,7 @@ img{
   display: flex;
   margin: 0 auto auto auto;
   z-index: 1;
+  border-radius: 8px;
 }
 .btnInContainer span{
   font-family: 'Montserrat', sans-serif;

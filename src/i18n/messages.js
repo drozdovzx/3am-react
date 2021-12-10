@@ -8,7 +8,7 @@ export const messages = {
         menu_item_4: 'Create',
         menu_item_5: 'Order',
         order_button: 'More',
-        about_1: 'Story about our Bakery',
+        about_1: 'About',
         about_2: 'We tried our best, that anyone could choose favorite cookie. Not just by the taste, but\n' +
             'also by the\n' +
             'lifestyle. Vegan, healthy, paleo, sugar-free, gluten-free, low-calorie or just traditional\n' +
@@ -60,7 +60,7 @@ export const messages = {
         menu_item_4: 'Создай',
         menu_item_5: 'Заказать',
         order_button: 'Больше',
-        about_1: 'История о нашей пекарне',
+        about_1: 'О нас',
         about_2: 'Компания друзей и уникальная выпечка- это 3AM Bakery.Печенье и брауни составляют основу нашей пекарни.' +
             '  С радостью предлагаем вам выпечку только с лучшими доступными ингридиентами и разнообразием вкусов.  ' +
             'Закажите онлайн полюбившееся печенье или брауни и мы бесплатно доставим лучшее вам.',
@@ -110,7 +110,7 @@ export const messages = {
         menu_item_4: 'Luua',
         menu_item_5: 'Tellida',
         order_button: 'Rohkem',
-        about_1: 'Lugu meie pagarist',
+        about_1: 'Meist',
         about_2: 'Ma ei viitsi seda tõlkida ja selle pärast ma jutustan teile väige lugu.\n' +
             'Mmmm, ei ole, ei taha.\n' +
             'Seda ka ei viitsi. No ok, annan teada, et need küpsised, mis mme valmistame on täitsa head.',
