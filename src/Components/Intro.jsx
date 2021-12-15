@@ -8,8 +8,16 @@ import Logo from "../images/logo.svg";
 const Intro = () => {
     return (
         <section className="intro size" name="myScrollToElement" id="sec-one">
-            <div className="intro-text">
+            {/*<div className="intro-text">
                 <img alt="3amtext" src={Text}/>
+            </div>*/}
+            <div className="introMoto">
+                <div>
+                    <span>Chewy</span><span>cookies</span>
+                </div>
+                <div>
+                    <span>Fudgy</span><span>brownies</span>
+                </div>
             </div>
             <HashLink  to="/list">
                 <button className="shop">

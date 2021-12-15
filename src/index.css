@@ -496,6 +496,19 @@ a {
   margin: auto auto;
   text-decoration: none !important;
 }
+.introMoto{
+  height: 200px;
+  width: 500px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 38px;
+}
+.introMoto div span:nth-child(1){
+  font-size: 80px;
+}
+.introMoto div span:nth-child(2){
+  font-size: 50px;
+}
 
 /*____About____*/
 .about{

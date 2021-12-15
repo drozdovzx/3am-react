@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Th from "../images/logo.svg";
+import Text from "../images/3amtext.svg";
 import Logo from "../images/logo.svg";
 import Strips from "../images/Main-menu-strips.svg";
 import Cart from "../Components/Cart"
@@ -58,7 +58,8 @@ const Header = ({ currentLocale, handleChange }) => {
             <div style={state ? {left: '100vw'} : {transitionDelay: '.3s', left: '0'}} id="white-back"/>
             <button className="logo" id="logo">
                 <HashLink to="/#sec-one">
-                    <img className="logo-img" alt="Logo" src={Logo}/>
+                    <img className="logo-img" alt="3amtext" src={Text}/>
+                    {/*<img className="logo-img" alt="Logo" src={Logo}/>*/}
                 </HashLink>
             </button>
             <button className="menu-btn" id="menu-btn" onClick={mobMenuClick}>
